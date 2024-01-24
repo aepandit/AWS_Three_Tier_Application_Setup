@@ -1,5 +1,7 @@
 In this Given Project, I am Implementing a 3 tier aweb application over AWS service and for that the source code have been provided from aws workshop studio,
 This project have been done only for personal experience and no other benefit.
+Our Architecture layout is asa given below.
+
 
 Step 1 : Creation of S3 bucket for storing the Code which will be fetched later on by the Instances.
 
@@ -57,10 +59,20 @@ Step 7: Web Tier Instance Deployment
 ![image](https://github.com/aepandit/AWS_Three_Tier_Application_Setup/assets/90674495/3a139717-b58c-47dd-8c87-186d69d0d6f7)
 
 Once the Web Application is Deployed and the web server is up, Once we hit the public ip of the server we get this below page.
+but since this is not a good security aspect of an application we will configure a External load balancer through which the traffic will be redirected,.
 
+![image](https://github.com/aepandit/AWS_Three_Tier_Application_Setup/assets/90674495/b62cec93-6642-462a-93b4-b9f738415bb6)
 
+Step 8 : Configure a Internet facing External Load Balancer.
+![image](https://github.com/aepandit/AWS_Three_Tier_Application_Setup/assets/90674495/3c5390b4-5ed3-4ba9-b725-ef6570f7ea7b)
 
+Final Step : Configure ASG to route traffic to web servers.
 
+Final Output : When we hit the DNS of External Load balancer, We can see the Traffic have been redirected to the web server.
+![image](https://github.com/aepandit/AWS_Three_Tier_Application_Setup/assets/90674495/15424cc2-3713-4222-9eb8-1bbeac82d3a7)
+
+Furthermore we can configure our domain inside this Load balancer for more security by providing the ssl certificate 
+in this case the port will be 443 insteaad of 80.
 
 
 
