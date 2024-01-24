@@ -1,6 +1,8 @@
 In this Given Project, I am Implementing a 3 tier aweb application over AWS service and for that the source code have been provided from aws workshop studio,
-This project have been done only for personal experience and no other benefit.
+
 Our Architecture layout is asa given below.
+![image](https://github.com/aepandit/AWS_Three_Tier_Application_Setup/assets/90674495/549a8ce2-a16a-4bfb-8c6e-e32e64652e9d)
+
 
 
 Step 1 : Creation of S3 bucket for storing the Code which will be fetched later on by the Instances.
