@@ -27,13 +27,39 @@ Step 3 : Building out the VPC networking components as well as security groups t
 - Routing Configuratoins
 ![image](https://github.com/aepandit/AWS_Three_Tier_Application_Setup/assets/90674495/f1c7e1af-ce72-4e15-84fd-d6650094d6a9)
 
--Creating 2 more route tables, one for each app layer private subnet in each availability zone. These route tables will route app layer traffic destined for outside the VPC to the NAT gateway in the respective availability zone
+- Creating 2 more route tables, one for each app layer private subnet in each availability zone. These route tables will route app layer traffic destined for outside the VPC to the NAT gateway in the respective availability zone
 
 ![image](https://github.com/aepandit/AWS_Three_Tier_Application_Setup/assets/90674495/5e29fa99-efab-4e27-9efc-82ce63c09a35)
 
 - Creating Security Groups, Security group act as a firewall for EC2 instance as well as the Load balancer and allow the traffic i.e allowed inside the inbound rules.
 
 ![image](https://github.com/aepandit/AWS_Three_Tier_Application_Setup/assets/90674495/fddf0585-6c0e-4fc8-98e9-1ec8c1f1ea0f)
+
+Step 4 : Database Deployment
+![image](https://github.com/aepandit/AWS_Three_Tier_Application_Setup/assets/90674495/cbccc5a8-bc63-4f99-a108-6d8ba09d9b41)
+
+Step 5 : App Tier Instance Deployment
+
+![image](https://github.com/aepandit/AWS_Three_Tier_Application_Setup/assets/90674495/dde39c32-a3b5-4512-9de0-9b5ab65b4240)
+
+Step 6 : Configuring Internal Load Balancing and Auto Scaling to route traffic inside the instance.
+
+- Setting the Target Group.
+![image](https://github.com/aepandit/AWS_Three_Tier_Application_Setup/assets/90674495/c360fec5-516c-45f1-91db-57dbf19b5fd9)
+
+- Configuring Internal Load Balancer , listener port 80.
+![image](https://github.com/aepandit/AWS_Three_Tier_Application_Setup/assets/90674495/8a546e41-9294-414d-ae56-c85f31a60bd5)
+
+- Configuring Autoscaling Cluster so that if the traffic increases to the application the instance should spin up instantly without any downtime.
+![image](https://github.com/aepandit/AWS_Three_Tier_Application_Setup/assets/90674495/954fc134-9a85-4ea7-89e8-92099ba81023)
+
+Step 7: Web Tier Instance Deployment
+![image](https://github.com/aepandit/AWS_Three_Tier_Application_Setup/assets/90674495/3a139717-b58c-47dd-8c87-186d69d0d6f7)
+
+Once the Web Application is Deployed and the web server is up, Once we hit the public ip of the server we get this below page.
+
+
+
 
 
 
